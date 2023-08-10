@@ -1,20 +1,19 @@
-const path = require("path");
 const fs = require("fs");
-const https = require("https");
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const session = require("express-session");
-const MongoDBStore = require("connect-mongodb-session")(session);
-const cookieParser = require("cookie-parser"); // Add this line
-const flash = require("connect-flash");
-const { get404, get500 } = require("./controllers/error");
-const User = require("./models/User");
-const multer = require("multer");
 require("dotenv").config();
-const helmet = require("helmet");
+const path = require("path");
+const multer = require("multer");
 const morgan = require("morgan");
+const express = require("express");
+const mongoose = require("mongoose");
+const User = require("./models/User");
+const flash = require("connect-flash");
+const bodyParser = require("body-parser");
 const compression = require("compression");
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
+const { get404, get500 } = require("./controllers/error");
+const MongoDBStore = require("connect-mongodb-session")(session);
+
 const app = express();
 
 const fileStore = multer.diskStorage({
@@ -64,7 +63,7 @@ const accessLogStream = fs.createWriteStream(
 );
 
 // Best Practices
-app.use(helmet());
+// app.use(helmet());
 app.use(compression());
 app.use(morgan("combined", { stream: accessLogStream }));
 
