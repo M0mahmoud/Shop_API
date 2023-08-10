@@ -1,0 +1,8 @@
+{
+  "env": {
+    "PORT": "3000",
+    "MONGODB_URL_SESSION": "mongodb+srv://houdmohamed85:yX3YGnsZQtI7qR8W@notes.121ftjx.mongodb.net/shop",
+    "MONGOD_URL_CONNECT": "mongodb+srv://houdmohamed85:yX3YGnsZQtI7qR8W@notes.121ftjx.mongodb.net/shop?retryWrites=true&w=majority",
+    "STRIPE_KEY": "sk_test_51LYnPoJgZtZ1uHWravonzZ4ImXllIm4DeEyL5YQGrQiVm9d2LUeIoB3DmAGf4WqQmIRBzY8hKFEEOgnAnKPUOrnp00cMWSteNk"
+  }
+}
